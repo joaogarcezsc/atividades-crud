@@ -1,0 +1,35 @@
+﻿@model appPetShop.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <div class="card border">
+            <div class="card-header bg-black text-white text-center py-3">
+                <h5 class="card-title mb-0 text-uppercase tracking-wide">Acesso ao Sistema</h5>
+            </div>
+            <div class="card-body p-4">
+                <form asp-action="Login" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3 small"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="Cpf" class="form-label fw-medium small text-uppercase"></label>
+                        <input asp-for="Cpf" class="form-control" placeholder="111.222.333-44" autofocus />
+                        <span asp-validation-for="Cpf" class="text-danger small"></span>
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer bg-white text-center py-3 border-top">
+                <p class="mb-0 small text-muted">
+                    Ainda não tem cadastro? <a asp-controller="Cliente" asp-action="Create" class="text-black fw-semibold text-decoration-none">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

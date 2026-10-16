@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+<div class="py-5 my-3">
+    <div class="row align-items-center">
+        <div class="col-lg-8">
+            <h1 class="display-5 fw-bold text-black mb-3">Gestão de Agendamentos PetShop</h1>
+            <p class="lead text-muted mb-4">
+                Plataforma centralizada para gestão de clientes, corpo veterinário e agendamentos de serviços.
+            </p>
+            <div class="d-flex gap-2">
+                <a asp-controller="ReservaServico" asp-action="Index" class="btn btn-primary px-4 py-2">Ver Agendamentos</a>
+                <a asp-controller="Cliente" asp-action="Create" class="btn btn-outline-primary px-4 py-2">Novo Cliente</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5" style="border-color: #e5e5e5;" />
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="p-4 border bg-white h-100">
+            <h5 class="fw-bold mb-2">Agendamentos</h5>
+            <p class="text-muted small mb-3">Consulte, crie ou altere o estado das reservas de serviços veterinários.</p>
+            <a asp-controller="ReservaServico" asp-action="Index" class="text-black fw-medium text-decoration-none small">Aceder Reservas &rarr;</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-4 border bg-white h-100">
+            <h5 class="fw-bold mb-2">Veterinários</h5>
+            <p class="text-muted small mb-3">Controlo de dados profissionais, CRMV e especialidades médicas.</p>
+            <a asp-controller="Veterinario" asp-action="Index" class="text-black fw-medium text-decoration-none small">Gerir Veterinários &rarr;</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-4 border bg-white h-100">
+            <h5 class="fw-bold mb-2">Clientes</h5>
+            <p class="text-muted small mb-3">Registo e consulta da base de dados de tutores cadastrados.</p>
+            <a asp-controller="Cliente" asp-action="Index" class="text-black fw-medium text-decoration-none small">Gerir Clientes &rarr;</a>
+        </div>
+    </div>
+</div>
